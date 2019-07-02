@@ -15,7 +15,7 @@ var apiCall = process.argv[2];
 
 var userInput = process.argv.slice(2);
 
-console.log("First test: " + userInput);
+//console.log("First test: " + userInput);
 
 
 // switch(apiCall){
@@ -91,39 +91,40 @@ function band() {
 
     var artistname = userInput.join("%20")
 
-    console.log(artistname)
+    //console.log("Artist Name:"+artistname)
     var queryUrlBands = "https://rest.bandsintown.com/artists/" + artistname + "/events?app_id=codingbootcamp";
 
 
-    console.log("this is second test: " + queryUrlBands);
+    //console.log("this is line98 test: " + queryUrlBands);
 
     axios.get(queryUrlBands).then(
-
         function (response) {
-
+//
         //   var date = response.data[0].datetime.slice(0,10)
         //   var year = date.slice(0,4);
         //   var month = date.slice(5,7)
         //   var day = date.slice(8,11)
         //   var properDate = month + "/" + day+ "/" + year
         //   console.log(properDate)
-       
+       //
         //         console.log("Date: " + properDate);
-        //         console.log("Name of the venue" + response.data[0].venue.name);
+        //         console.log("Name of the venue: " + response.data[0].venue.name);
         //         console.log("Venue location: " + response.data[0].venue.city)
 
-        for (i=0; i<2; i++) {
+        console.log("this is line 114 test: " + queryUrlBands);
+        for (i=0; i<response.data.length; i++) {
+            var j=i+1
             var date = response.data[i].datetime.slice(0,10)
         var year = date.slice(0,4);
         var month = date.slice(5,7)
         var day = date.slice(8,11)
         var properDate = month + "/" + day+ "/" + year
-        console.log(properDate)
-     
-              console.log("Date: " + properDate + "\n");
-              console.log("Name of the venue" + response.data[i].venue.name + "\n");
+        //console.log(properDate)
+              console.log("Event: " + j)
+              console.log("Date: " + properDate);
+              console.log("Name of the venue: " + response.data[i].venue.name );
               console.log("Venue location: " + response.data[i].venue.city)
-              console.log("-------------Dataseparator---------------")
+              console.log("----------------------------\n")
 
         }
         
@@ -152,7 +153,9 @@ function band() {
             console.log(error.config);
         });
 }
-console.log( "This is the info: " + band());
+
+//console.log( "This is the info: " + band());
+console.log(band());
 
 
 
