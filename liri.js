@@ -19,6 +19,8 @@ var apiCall = process.argv[2];
 
 var userInput = process.argv.slice(3);
 
+var songName = userInput.join();
+
 var artistname = userInput.join("%20")
 
 
@@ -42,13 +44,13 @@ if (apiCall == "movie-this") {
 
 else if (apiCall == "concert-this") {
 
-    console.log(band());
+    band()
 
 }
 else if (apiCall == "spotify-this-song") {
 
     
-    songSearch(artistname);
+    songSearch(songName);
 
 }
 else if (apiCall == "do-what-it-says") {
