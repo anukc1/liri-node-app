@@ -17,7 +17,7 @@
 which function to run when it receives one command vs the other. The functions are global and listed at the end. 
 
 
-#Link to github: 
+#Link to github:  https://anukc1.github.io/liri-node-app/
 
 #Technologies used in the app: Node js, moments js, axios package, Spotify API, OMDB API, DotEnv, Bands in Town API, 
 
