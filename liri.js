@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 var fs = require("fs")
@@ -49,8 +48,14 @@ else if (apiCall == "concert-this") {
 }
 else if (apiCall == "spotify-this-song") {
 
+    if (songName == "") {
+        songName = "The Sign by Ace of Base"
+        console.log("You did not enter the song name, so 'The Sign' is the default")
+       songSearch(songName)
+    }else {
+        songSearch(songName);
+    }
     
-    songSearch(songName);
 
 }
 else if (apiCall == "do-what-it-says") {
@@ -61,29 +66,19 @@ else if (apiCall == "do-what-it-says") {
 
 function band() {
 
-    //console.log("Artist Name:"+artistname)
+    
     var queryUrlBands = "https://rest.bandsintown.com/artists/" + artistname + "/events?app_id=codingbootcamp";
-
-
-    console.log("this is line98 test: " + queryUrlBands);
 
     axios.get(queryUrlBands).then(
         function (response) {
-
-            var date = response.data[0].datetime
-            var properDate = moment(date).format('L')
-            console.log("Date: " + properDate);
-            console.log("Name of the venue: " + response.data[0].venue.name);
-            console.log("Venue location: " + response.data[0].venue.city)
-
-            console.log("this is line 114 test: " + queryUrlBands);
+           
             for (i = 0; i < response.data.length; i++) {
-                var j = i + 1
+               
                 var date = response.data[i].datetime
                 var properDate = moment(date).format('L')
-                console.log("Event: " + j)
-                console.log("Date: " + properDate);
+                
                 console.log("Name of the venue: " + response.data[i].venue.name);
+                console.log("Date: " + properDate);
                 console.log("Venue location: " + response.data[i].venue.city)
                 console.log("----------------------------\n")
 
@@ -187,7 +182,7 @@ function doWhatever() {
         }
         (data.split())
         var arrayData = data.split(",");
-        //console.log(arrayData[1])
+        
         console.log(songSearch(arrayData[1]));
     
     })
