@@ -12,7 +12,7 @@
 
 # If the movie-this command is ran without the name of the movie then the default movie Mr Nobody will run and if spotify-this-song is ran without the name of the song then Ace of Base will run as a default. 
 
--------------------------XX----XX--------XX----------------------------------------------------------
+
 #liri.js file is organized with all the required dependencies listed on top of the file followed by establishing variables for user's input in the terminal. Then we have the if/else statements instructing
 which function to run when it receives one command vs the other. The functions are global and listed at the end. 
 
