@@ -23,16 +23,16 @@ which function to run when it receives one command vs the other. The functions a
 
 #Screnshoots that shows LIRI app running from the user side.
 
-
+Data output of Bands-In-Town API
 ![Data output of Bands-In-Town API](https://github.com/anukc1/liri-node-app/blob/master/Images/Concert-this.png)
 
-
+Data output of Spotify API
 ![Data output of Spotify API](https://github.com/anukc1/liri-node-app/blob/master/Images/Spotify-this.png)
 
-    
+ Data output of OMDB API   
 ![ Data output of OMDB API](https://github.com/anukc1/liri-node-app/blob/master/Images/Movie-this.png)
 
-    
+ Data output using do-what-it-says command  
 ![ Data output using do-what-it-says command](https://github.com/anukc1/liri-node-app/blob/master/Images/Do-what-it-says.png)
 
    
